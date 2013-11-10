@@ -195,6 +195,14 @@
 		31150349182C540A0048BDCF /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 31150348182C540A0048BDCF /* RootViewController.mm */; };
 		3115034D182C540A0048BDCF /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3115034C182C540A0048BDCF /* AppDelegate.cpp */; };
 		31150350182C540A0048BDCF /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3115034F182C540A0048BDCF /* HelloWorldScene.cpp */; };
+		3115035B182C54BB0048BDCF /* shoot.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31150357182C54BB0048BDCF /* shoot.plist */; };
+		3115035C182C54BB0048BDCF /* shoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 31150358182C54BB0048BDCF /* shoot.png */; };
+		3115035D182C54BB0048BDCF /* shoot_background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31150359182C54BB0048BDCF /* shoot_background.plist */; };
+		3115035E182C54BB0048BDCF /* shoot_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3115035A182C54BB0048BDCF /* shoot_background.png */; };
+		311B3619182DBA0500B67D4B /* WelcomeScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B3618182DBA0500B67D4B /* WelcomeScene.cpp */; };
+		311B361C182DBC9B00B67D4B /* WelcomeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B361B182DBC9B00B67D4B /* WelcomeLayer.cpp */; };
+		311B361E182E218A00B67D4B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B361D182E218A00B67D4B /* GameScene.cpp */; };
+		311B3621182E238800B67D4B /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B3620182E238800B67D4B /* GameLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -601,6 +609,18 @@
 		3115034C182C540A0048BDCF /* AppDelegate.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = AppDelegate.cpp; path = Classes/AppDelegate.cpp; sourceTree = "<group>"; };
 		3115034E182C540A0048BDCF /* HelloWorldScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = HelloWorldScene.h; path = Classes/HelloWorldScene.h; sourceTree = "<group>"; };
 		3115034F182C540A0048BDCF /* HelloWorldScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = HelloWorldScene.cpp; path = Classes/HelloWorldScene.cpp; sourceTree = "<group>"; };
+		31150357182C54BB0048BDCF /* shoot.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shoot.plist; sourceTree = "<group>"; };
+		31150358182C54BB0048BDCF /* shoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot.png; sourceTree = "<group>"; };
+		31150359182C54BB0048BDCF /* shoot_background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shoot_background.plist; sourceTree = "<group>"; };
+		3115035A182C54BB0048BDCF /* shoot_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot_background.png; sourceTree = "<group>"; };
+		3115035F182C55AE0048BDCF /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameScene.h; path = Classes/GameScene.h; sourceTree = "<group>"; };
+		311B3617182DB85E00B67D4B /* WelcomeScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomeScene.h; path = Classes/WelcomeScene.h; sourceTree = "<group>"; };
+		311B3618182DBA0500B67D4B /* WelcomeScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WelcomeScene.cpp; path = Classes/WelcomeScene.cpp; sourceTree = "<group>"; };
+		311B361A182DBB8E00B67D4B /* WelcomeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = WelcomeLayer.h; path = Classes/WelcomeLayer.h; sourceTree = "<group>"; };
+		311B361B182DBC9B00B67D4B /* WelcomeLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = WelcomeLayer.cpp; path = Classes/WelcomeLayer.cpp; sourceTree = "<group>"; };
+		311B361D182E218A00B67D4B /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
+		311B361F182E237200B67D4B /* GameLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = Classes/GameLayer.h; sourceTree = "<group>"; };
+		311B3620182E238800B67D4B /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = Classes/GameLayer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -669,6 +689,7 @@
 		311500E3182C54070048BDCF /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				31150356182C54BB0048BDCF /* ui */,
 				311500E4182C54070048BDCF /* CloseNormal.png */,
 				311500E6182C54070048BDCF /* CloseSelected.png */,
 				311500E8182C54070048BDCF /* Default.png */,
@@ -1431,12 +1452,32 @@
 		3115034A182C540A0048BDCF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				3115034B182C540A0048BDCF /* AppDelegate.h */,
 				3115034C182C540A0048BDCF /* AppDelegate.cpp */,
-				3115034E182C540A0048BDCF /* HelloWorldScene.h */,
+				3115034B182C540A0048BDCF /* AppDelegate.h */,
+				311B3620182E238800B67D4B /* GameLayer.cpp */,
+				311B361F182E237200B67D4B /* GameLayer.h */,
+				311B361D182E218A00B67D4B /* GameScene.cpp */,
+				3115035F182C55AE0048BDCF /* GameScene.h */,
 				3115034F182C540A0048BDCF /* HelloWorldScene.cpp */,
+				3115034E182C540A0048BDCF /* HelloWorldScene.h */,
+				311B361B182DBC9B00B67D4B /* WelcomeLayer.cpp */,
+				311B361A182DBB8E00B67D4B /* WelcomeLayer.h */,
+				311B3618182DBA0500B67D4B /* WelcomeScene.cpp */,
+				311B3617182DB85E00B67D4B /* WelcomeScene.h */,
 			);
 			name = Classes;
+			sourceTree = "<group>";
+		};
+		31150356182C54BB0048BDCF /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				31150357182C54BB0048BDCF /* shoot.plist */,
+				31150358182C54BB0048BDCF /* shoot.png */,
+				31150359182C54BB0048BDCF /* shoot_background.plist */,
+				3115035A182C54BB0048BDCF /* shoot_background.png */,
+			);
+			name = ui;
+			path = Resources/ui;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1491,14 +1532,18 @@
 			files = (
 				311500F5182C54080048BDCF /* Icon.png in Resources */,
 				311500E5182C54070048BDCF /* CloseNormal.png in Resources */,
+				3115035B182C54BB0048BDCF /* shoot.plist in Resources */,
+				3115035E182C54BB0048BDCF /* shoot_background.png in Resources */,
 				311500F1182C54070048BDCF /* Icon-Small.png in Resources */,
 				311500ED182C54070048BDCF /* Icon-72.png in Resources */,
 				311500EB182C54070048BDCF /* HelloWorld.png in Resources */,
 				311500EF182C54070048BDCF /* Icon-Small-50.png in Resources */,
+				3115035C182C54BB0048BDCF /* shoot.png in Resources */,
 				311500FA182C54080048BDCF /* iTunesArtwork in Resources */,
 				311500F3182C54070048BDCF /* Icon-Small@2x.png in Resources */,
 				311501F7182C54090048BDCF /* ChangeLog in Resources */,
 				311500E9182C54070048BDCF /* Default.png in Resources */,
+				3115035D182C54BB0048BDCF /* shoot_background.plist in Resources */,
 				311500E7182C54070048BDCF /* CloseSelected.png in Resources */,
 				311500F7182C54080048BDCF /* Icon@2x.png in Resources */,
 				311500FC182C54080048BDCF /* fps_images.png in Resources */,
@@ -1582,11 +1627,13 @@
 				3115015E182C54080048BDCF /* cocos2d.cpp in Sources */,
 				311502D2182C54090048BDCF /* base64.cpp in Sources */,
 				31150281182C54090048BDCF /* CCThread.mm in Sources */,
+				311B361E182E218A00B67D4B /* GameScene.cpp in Sources */,
 				311501FF182C54090048BDCF /* mat3.c in Sources */,
 				311501AE182C54080048BDCF /* CCControlSaturationBrightnessPicker.cpp in Sources */,
 				31150183182C54080048BDCF /* CCLayerLoader.cpp in Sources */,
 				31150263182C54090048BDCF /* AccelerometerDelegateWrapper.mm in Sources */,
 				31150107182C54080048BDCF /* CCActionCatmullRom.cpp in Sources */,
+				311B3619182DBA0500B67D4B /* WelcomeScene.cpp in Sources */,
 				311502BB182C54090048BDCF /* ccShaders.cpp in Sources */,
 				3115020F182C54090048BDCF /* vec3.c in Sources */,
 				3115019A182C54080048BDCF /* CCScrollViewLoader.cpp in Sources */,
@@ -1668,6 +1715,8 @@
 				3115026B182C54090048BDCF /* CCCommon.mm in Sources */,
 				31150314182C540A0048BDCF /* CCTileMapAtlas.cpp in Sources */,
 				311502CB182C54090048BDCF /* CCSpriteFrame.cpp in Sources */,
+				311B3621182E238800B67D4B /* GameLayer.cpp in Sources */,
+				311B361C182DBC9B00B67D4B /* WelcomeLayer.cpp in Sources */,
 				31150271182C54090048BDCF /* CCEGLView.mm in Sources */,
 				311501CF182C54080048BDCF /* CCNotificationCenter.cpp in Sources */,
 				3115019D182C54080048BDCF /* CCSpriteLoader.cpp in Sources */,
@@ -1794,6 +1843,7 @@
 				31150355182C540A0048BDCF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
