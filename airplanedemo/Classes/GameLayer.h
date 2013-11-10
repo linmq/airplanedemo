@@ -10,6 +10,7 @@
 #define airplanedemo_GameLayer_h
 
 #include "cocos2d.h"
+#include "PlaneLayer.h"
 
 USING_NS_CC;
 
@@ -26,6 +27,8 @@ public:
 public:
     CCSprite * background1;
     CCSprite * background2;
+    
+    PlaneLayer* planeLayer;
 };
 
 

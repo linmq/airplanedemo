@@ -203,6 +203,7 @@
 		311B361C182DBC9B00B67D4B /* WelcomeLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B361B182DBC9B00B67D4B /* WelcomeLayer.cpp */; };
 		311B361E182E218A00B67D4B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B361D182E218A00B67D4B /* GameScene.cpp */; };
 		311B3621182E238800B67D4B /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B3620182E238800B67D4B /* GameLayer.cpp */; };
+		31781852182F6F8D00680C21 /* PlaneLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31781851182F6F8D00680C21 /* PlaneLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -621,6 +622,8 @@
 		311B361D182E218A00B67D4B /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameScene.cpp; path = Classes/GameScene.cpp; sourceTree = "<group>"; };
 		311B361F182E237200B67D4B /* GameLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GameLayer.h; path = Classes/GameLayer.h; sourceTree = "<group>"; };
 		311B3620182E238800B67D4B /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = Classes/GameLayer.cpp; sourceTree = "<group>"; };
+		31781850182F6F6A00680C21 /* PlaneLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlaneLayer.h; path = Classes/PlaneLayer.h; sourceTree = "<group>"; };
+		31781851182F6F8D00680C21 /* PlaneLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlaneLayer.cpp; path = Classes/PlaneLayer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1464,6 +1467,8 @@
 				311B361A182DBB8E00B67D4B /* WelcomeLayer.h */,
 				311B3618182DBA0500B67D4B /* WelcomeScene.cpp */,
 				311B3617182DB85E00B67D4B /* WelcomeScene.h */,
+				31781850182F6F6A00680C21 /* PlaneLayer.h */,
+				31781851182F6F8D00680C21 /* PlaneLayer.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1609,6 +1614,7 @@
 				311501B7182C54080048BDCF /* CCControlUtils.cpp in Sources */,
 				31150174182C54080048BDCF /* CCControlLoader.cpp in Sources */,
 				311501C3182C54080048BDCF /* CCSpacer.cpp in Sources */,
+				31781852182F6F8D00680C21 /* PlaneLayer.cpp in Sources */,
 				3115021B182C54090048BDCF /* CCLabelAtlas.cpp in Sources */,
 				31150101182C54080048BDCF /* CCAction.cpp in Sources */,
 				31150343182C540A0048BDCF /* main.m in Sources */,

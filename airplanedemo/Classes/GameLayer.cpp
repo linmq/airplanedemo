@@ -8,6 +8,7 @@
 
 #include "GameLayer.h"
 
+
 GameLayer::GameLayer(void)
 {
     
@@ -25,6 +26,7 @@ bool GameLayer::init()
         
         // png加入全局
         CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("shoot_background.plist");
+        CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("shoot.plist");
         
         // 加载background1
         background1 = CCSprite::create(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("background.png"));
@@ -37,6 +39,10 @@ bool GameLayer::init()
         background2->setAnchorPoint(ccp(0, 0));
         background2->setPosition( ccp(0, background2->getContentSize().height-2));
         this->addChild(background2);
+        
+        // 加入planeLayer
+        this->planeLayer = PlaneLayer::create();
+        this->addChild(planeLayer);
         
         this->schedule(schedule_selector(GameLayer::backgroundMove), 0.01f);
         
