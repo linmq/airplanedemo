@@ -11,7 +11,7 @@
 
 GameLayer::GameLayer(void)
 {
-    
+    bulletLayer = NULL;
 }
 
 GameLayer::~GameLayer(void)
@@ -24,27 +24,33 @@ bool GameLayer::init()
     do {
         CC_BREAK_IF(!CCLayer::init());
         
-        // png加入全局
+        // add all png
         CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("shoot_background.plist");
         CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("shoot.plist");
         
-        // 加载background1
+        // load background1
         background1 = CCSprite::create(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("background.png"));
         background1->setAnchorPoint(ccp(0, 0));
         background1->setPosition(ccp(0, 0));
         this->addChild(background1);
         
-        // 加载background2
+        // load background2
         background2 = CCSprite::create(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("background.png"));
         background2->setAnchorPoint(ccp(0, 0));
         background2->setPosition( ccp(0, background2->getContentSize().height-2));
         this->addChild(background2);
         
-        // 加入planeLayer
+        // add planeLayer
         this->planeLayer = PlaneLayer::create();
         this->addChild(planeLayer);
-        
         this->schedule(schedule_selector(GameLayer::backgroundMove), 0.01f);
+        
+        // add bulletLayer
+        /*
+        this->bulletLayer = BulletLayer::create();
+        this->addChild(bulletLayer);
+        this->bulletLayer->StartShoot();
+        */
         
         bRet = true;
     } while (0);

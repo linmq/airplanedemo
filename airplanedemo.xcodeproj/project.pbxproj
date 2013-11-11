@@ -204,6 +204,7 @@
 		311B361E182E218A00B67D4B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B361D182E218A00B67D4B /* GameScene.cpp */; };
 		311B3621182E238800B67D4B /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B3620182E238800B67D4B /* GameLayer.cpp */; };
 		31781852182F6F8D00680C21 /* PlaneLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31781851182F6F8D00680C21 /* PlaneLayer.cpp */; };
+		317818581830509E00680C21 /* BulletLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 317818571830509E00680C21 /* BulletLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -624,6 +625,8 @@
 		311B3620182E238800B67D4B /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = Classes/GameLayer.cpp; sourceTree = "<group>"; };
 		31781850182F6F6A00680C21 /* PlaneLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PlaneLayer.h; path = Classes/PlaneLayer.h; sourceTree = "<group>"; };
 		31781851182F6F8D00680C21 /* PlaneLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = PlaneLayer.cpp; path = Classes/PlaneLayer.cpp; sourceTree = "<group>"; };
+		317818531830504800680C21 /* BulletLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BulletLayer.h; path = Classes/BulletLayer.h; sourceTree = "<group>"; };
+		317818571830509E00680C21 /* BulletLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = BulletLayer.cpp; path = Classes/BulletLayer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1457,18 +1460,20 @@
 			children = (
 				3115034C182C540A0048BDCF /* AppDelegate.cpp */,
 				3115034B182C540A0048BDCF /* AppDelegate.h */,
+				317818571830509E00680C21 /* BulletLayer.cpp */,
+				317818531830504800680C21 /* BulletLayer.h */,
 				311B3620182E238800B67D4B /* GameLayer.cpp */,
 				311B361F182E237200B67D4B /* GameLayer.h */,
 				311B361D182E218A00B67D4B /* GameScene.cpp */,
 				3115035F182C55AE0048BDCF /* GameScene.h */,
 				3115034F182C540A0048BDCF /* HelloWorldScene.cpp */,
 				3115034E182C540A0048BDCF /* HelloWorldScene.h */,
+				31781851182F6F8D00680C21 /* PlaneLayer.cpp */,
+				31781850182F6F6A00680C21 /* PlaneLayer.h */,
 				311B361B182DBC9B00B67D4B /* WelcomeLayer.cpp */,
 				311B361A182DBB8E00B67D4B /* WelcomeLayer.h */,
 				311B3618182DBA0500B67D4B /* WelcomeScene.cpp */,
 				311B3617182DB85E00B67D4B /* WelcomeScene.h */,
-				31781850182F6F6A00680C21 /* PlaneLayer.h */,
-				31781851182F6F8D00680C21 /* PlaneLayer.cpp */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -1623,6 +1628,7 @@
 				311501BD182C54080048BDCF /* CCMenuPassive.cpp in Sources */,
 				3115030A182C540A0048BDCF /* CCTextureCache.cpp in Sources */,
 				31150214182C54090048BDCF /* CCKeypadDelegate.cpp in Sources */,
+				317818581830509E00680C21 /* BulletLayer.cpp in Sources */,
 				3115014B182C54080048BDCF /* CCGeometry.cpp in Sources */,
 				3115022E182C54090048BDCF /* CCTransitionPageTurn.cpp in Sources */,
 				31150317182C540A0048BDCF /* CCTMXLayer.cpp in Sources */,

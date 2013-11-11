@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "PlaneLayer.h"
+#include "BulletLayer.h"
 
 USING_NS_CC;
 
@@ -28,7 +29,8 @@ public:
     CCSprite * background1;
     CCSprite * background2;
     
-    PlaneLayer* planeLayer;
+    PlaneLayer * planeLayer;
+    BulletLayer * bulletLayer;
 };
 
 
