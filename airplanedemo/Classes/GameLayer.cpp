@@ -46,11 +46,9 @@ bool GameLayer::init()
         this->schedule(schedule_selector(GameLayer::backgroundMove), 0.01f);
         
         // add bulletLayer
-        /*
         this->bulletLayer = BulletLayer::create();
         this->addChild(bulletLayer);
         this->bulletLayer->StartShoot();
-        */
         
         bRet = true;
     } while (0);
