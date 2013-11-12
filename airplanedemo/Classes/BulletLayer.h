@@ -25,9 +25,18 @@ public:
     
     void AddBullet(float dt);
     
+    void bulletMoveFinished(CCNode* pSender);
+    
+    void RemoveBullet(CCSprite* bullet);
+    
     void StartShoot(float delay=0.0f);
     
+    void StopShoot();
+    
 public:
+    
+    CCArray* m_pAllBullet;
+    
     CCSpriteBatchNode* bulletBatchNode;
     
 };
