@@ -65,3 +65,31 @@ bool PlaneLayer::init()
     
     return bRet;
 }
+
+void PlaneLayer::MoveTo(CCPoint location)
+{
+    // adjust the edge
+    if (isAlive && !CCDirector::sharedDirector()->isPaused())
+    {
+        CCPoint actualPoint;
+        CCSize winSize = CCDirector::sharedDirector()->getWinSize();
+        CCSize planeSize = this->getChildByTag(AIRPLANE)->getContentSize();
+        if (location.x<planeSize.width/2)
+        {
+            location.x = planeSize.width/2;
+        }
+        if (location.x > winSize.width-planeSize.width/2)
+        {
+            location.x = winSize.width-planeSize.width/2;
+        }
+        if (location.y < planeSize.height/2)
+        {
+            location.y = planeSize.height/2;
+        }
+        if (location.y > winSize.height - planeSize.height/2)
+        {
+            location.y = winSize.height - planeSize.height/2;
+        }
+        this->getChildByTag(AIRPLANE)->setPosition(location);
+    }
+}

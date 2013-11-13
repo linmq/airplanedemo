@@ -30,3 +30,4 @@ bool GameScene::init()
     
     return bRet;
 }
+

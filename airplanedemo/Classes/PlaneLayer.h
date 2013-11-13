@@ -23,6 +23,8 @@ public:
     
     static PlaneLayer * create();
     
+    void MoveTo(CCPoint location);
+    
     virtual bool init();
     
     

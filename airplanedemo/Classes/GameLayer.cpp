@@ -50,6 +50,9 @@ bool GameLayer::init()
         this->addChild(bulletLayer);
         this->bulletLayer->StartShoot();
         
+        // set touch enabled
+        this->setTouchEnabled(true);
+        
         bRet = true;
     } while (0);
     
@@ -65,3 +68,44 @@ void GameLayer::backgroundMove(float dt)
 		background1->setPositionY(0);
 	}
 }
+
+void GameLayer::registerWithTouchDispatcher()
+{
+    CCDirector * pDirector = CCDirector::sharedDirector();
+    pDirector->getTouchDispatcher()->addTargetedDelegate(this, 0, true);
+}
+
+bool GameLayer::ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent)
+{
+    return true;
+}
+
+void GameLayer::ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent)
+{
+    if (this->planeLayer->isAlive)
+    {
+        CCPoint beginPoint = pTouch->locationInView();
+        beginPoint = CCDirector::sharedDirector()->convertToGL(beginPoint);
+        // juggle the area of drag
+        CCRect planeRect = this->planeLayer->getChildByTag(AIRPLANE)->boundingBox();
+        planeRect.origin.x -= 15;
+        planeRect.origin.y -= 15;
+        planeRect.size.width += 30;
+        planeRect.size.height += 30;
+        if (CCRect::CCRectContainsPoint(planeRect, this->getParent()->convertTouchToNodeSpace(pTouch)) == true)
+        {
+            CCPoint endPoint = pTouch->previousLocationInView();
+            endPoint = CCDirector::sharedDirector()->convertToGL(endPoint);
+            
+            CCPoint offSet = ccpSub(beginPoint, endPoint);
+            CCPoint toPoint = ccpAdd(this->planeLayer->getChildByTag(AIRPLANE)->getPosition(), offSet);
+            this->planeLayer->MoveTo(toPoint);
+        }
+    }
+}
+
+void GameLayer::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
+{
+    
+}
+

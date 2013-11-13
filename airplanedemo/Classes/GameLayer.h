@@ -25,6 +25,14 @@ public:
     
     void backgroundMove(float dt);
     
+    bool ccTouchBegan(CCTouch *pTouch, CCEvent *pEvent);
+    
+    void ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent);
+    
+    void ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent);
+    
+    void registerWithTouchDispatcher();
+    
 public:
     CCSprite * background1;
     CCSprite * background2;
