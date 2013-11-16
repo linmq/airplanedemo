@@ -205,6 +205,8 @@
 		311B3621182E238800B67D4B /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B3620182E238800B67D4B /* GameLayer.cpp */; };
 		31312F351837681E005B13FC /* Enemy2Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31312F311837681E005B13FC /* Enemy2Layer.cpp */; };
 		31312F361837681E005B13FC /* Enemy2Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31312F331837681E005B13FC /* Enemy2Sprite.cpp */; };
+		31312F3B18378C75005B13FC /* Enemy3Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31312F3718378C75005B13FC /* Enemy3Layer.cpp */; };
+		31312F3C18378C75005B13FC /* Enemy3Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31312F3918378C75005B13FC /* Enemy3Sprite.cpp */; };
 		314A09CB18358EE000E69CDA /* Enemy1Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314A09CA18358EE000E69CDA /* Enemy1Sprite.cpp */; };
 		314A09CE1835917600E69CDA /* Enemy1Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 314A09CD1835917600E69CDA /* Enemy1Layer.cpp */; };
 		31781852182F6F8D00680C21 /* PlaneLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31781851182F6F8D00680C21 /* PlaneLayer.cpp */; };
@@ -631,6 +633,10 @@
 		31312F321837681E005B13FC /* Enemy2Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy2Layer.h; path = Classes/Enemy2Layer.h; sourceTree = "<group>"; };
 		31312F331837681E005B13FC /* Enemy2Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy2Sprite.cpp; path = Classes/Enemy2Sprite.cpp; sourceTree = "<group>"; };
 		31312F341837681E005B13FC /* Enemy2Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy2Sprite.h; path = Classes/Enemy2Sprite.h; sourceTree = "<group>"; };
+		31312F3718378C75005B13FC /* Enemy3Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy3Layer.cpp; path = Classes/Enemy3Layer.cpp; sourceTree = "<group>"; };
+		31312F3818378C75005B13FC /* Enemy3Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy3Layer.h; path = Classes/Enemy3Layer.h; sourceTree = "<group>"; };
+		31312F3918378C75005B13FC /* Enemy3Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy3Sprite.cpp; path = Classes/Enemy3Sprite.cpp; sourceTree = "<group>"; };
+		31312F3A18378C75005B13FC /* Enemy3Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy3Sprite.h; path = Classes/Enemy3Sprite.h; sourceTree = "<group>"; };
 		314A09C918358EBF00E69CDA /* Enemy1Sprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy1Sprite.h; path = Classes/Enemy1Sprite.h; sourceTree = "<group>"; };
 		314A09CA18358EE000E69CDA /* Enemy1Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy1Sprite.cpp; path = Classes/Enemy1Sprite.cpp; sourceTree = "<group>"; };
 		314A09CC1835915B00E69CDA /* Enemy1Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy1Layer.h; path = Classes/Enemy1Layer.h; sourceTree = "<group>"; };
@@ -1470,6 +1476,10 @@
 		3115034A182C540A0048BDCF /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				31312F3718378C75005B13FC /* Enemy3Layer.cpp */,
+				31312F3818378C75005B13FC /* Enemy3Layer.h */,
+				31312F3918378C75005B13FC /* Enemy3Sprite.cpp */,
+				31312F3A18378C75005B13FC /* Enemy3Sprite.h */,
 				31312F311837681E005B13FC /* Enemy2Layer.cpp */,
 				31312F321837681E005B13FC /* Enemy2Layer.h */,
 				31312F331837681E005B13FC /* Enemy2Sprite.cpp */,
@@ -1615,6 +1625,7 @@
 				31150152182C54080048BDCF /* CCObject.cpp in Sources */,
 				31150177182C54080048BDCF /* CCLabelBMFontLoader.cpp in Sources */,
 				311502C8182C54090048BDCF /* CCSpriteBatchNode.cpp in Sources */,
+				31312F3B18378C75005B13FC /* Enemy3Layer.cpp in Sources */,
 				31150329182C540A0048BDCF /* CCTouchHandler.cpp in Sources */,
 				31150158182C54080048BDCF /* CCString.cpp in Sources */,
 				311501A7182C54080048BDCF /* CCControlColourPicker.cpp in Sources */,
@@ -1744,6 +1755,7 @@
 				3115024F182C54090048BDCF /* CCParticleSystemQuad.cpp in Sources */,
 				3115013F182C54080048BDCF /* CCAffineTransform.cpp in Sources */,
 				31150217182C54090048BDCF /* CCKeypadDispatcher.cpp in Sources */,
+				31312F3C18378C75005B13FC /* Enemy3Sprite.cpp in Sources */,
 				31150169182C54080048BDCF /* CCBFileLoader.cpp in Sources */,
 				311501F5182C54080048BDCF /* aabb.c in Sources */,
 				311502EB182C54090048BDCF /* TGAlib.cpp in Sources */,

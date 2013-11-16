@@ -30,7 +30,7 @@ bool Enemy2Layer::init()
         
         enemy2SpriteFrame = CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("enemy2.png");
         
-        this->schedule(schedule_selector(Enemy2Layer::AddEnemy2), 0.5f);
+        this->schedule(schedule_selector(Enemy2Layer::AddEnemy2), 3.0f);
         
         bRet = true;
     } while (0);
@@ -53,8 +53,8 @@ void Enemy2Layer::AddEnemy2(float dt)
     this->addChild(enemy2);
     this->m_pAllEnemy2->addObject(enemy2);
     
-    int minDuration = 2;
-    int maxDuration = 4;
+    int minDuration = 3;
+    int maxDuration = 6;
     int rangeDuration = maxDuration - minDuration;
     int actualDuration = (rand()%rangeDuration) + minDuration;
     
