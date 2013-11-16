@@ -6,13 +6,13 @@
 //
 //
 
-#ifndef airplanedemo_Enemy_h
-#define airplanedemo_Enemy_h
+#ifndef airplanedemo_Enemy1Sprite_h
+#define airplanedemo_Enemy1Sprite_h
 
 #include "cocos2d.h"
 USING_NS_CC;
 
-const int ENEMY_MAXLIFE=1;
+const int ENEMY1_MAXLIFE=1;
 
 class Enemy1Sprite : public CCSprite
 {

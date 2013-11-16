@@ -14,7 +14,7 @@ Enemy1Sprite * Enemy1Sprite::create(CCSpriteFrame * pSpriteFrame)
     Enemy1Sprite * pobSprite = new Enemy1Sprite;
     if (pobSprite && pobSprite->initWithSpriteFrame(pSpriteFrame))
     {
-        pobSprite->life = ENEMY_MAXLIFE;
+        pobSprite->life = ENEMY1_MAXLIFE;
         pobSprite->autorelease();
         return pobSprite;
     }

@@ -13,6 +13,7 @@
 #include "PlaneLayer.h"
 #include "BulletLayer.h"
 #include "Enemy1Layer.h"
+#include "Enemy2Layer.h"
 
 USING_NS_CC;
 
@@ -41,6 +42,7 @@ public:
     PlaneLayer * planeLayer;
     BulletLayer * bulletLayer;
     Enemy1Layer* enemy1Layer;
+    Enemy2Layer* enemy2Layer;
 };
 
 
