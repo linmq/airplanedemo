@@ -12,6 +12,7 @@
 #include "cocos2d.h"
 #include "PlaneLayer.h"
 #include "BulletLayer.h"
+#include "Enemy1Layer.h"
 
 USING_NS_CC;
 
@@ -39,6 +40,7 @@ public:
     
     PlaneLayer * planeLayer;
     BulletLayer * bulletLayer;
+    Enemy1Layer* enemy1Layer;
 };
 
 

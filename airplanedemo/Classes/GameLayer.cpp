@@ -7,7 +7,7 @@
 //
 
 #include "GameLayer.h"
-
+#include "Enemy1Sprite.h"
 
 GameLayer::GameLayer(void)
 {
@@ -49,6 +49,10 @@ bool GameLayer::init()
         this->bulletLayer = BulletLayer::create();
         this->addChild(bulletLayer);
         this->bulletLayer->StartShoot();
+        
+        // add enemy1Layer
+        this->enemy1Layer = Enemy1Layer::create();
+        this->addChild(enemy1Layer);
         
         // set touch enabled
         this->setTouchEnabled(true);
