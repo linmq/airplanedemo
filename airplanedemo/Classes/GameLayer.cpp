@@ -69,6 +69,10 @@ bool GameLayer::init()
 		this->ufoLayer=UFOLayer::create();
 		this->addChild(ufoLayer);
         
+        //加入controlLayer
+		this->controlLayer=ControlLayer::create();
+		this->addChild(controlLayer);
+        
         // set touch enabled
         this->setTouchEnabled(true);
         

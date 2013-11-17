@@ -16,6 +16,7 @@
 #include "Enemy2Layer.h"
 #include "Enemy3Layer.h"
 #include "UFOLayer.h"
+#include "ControlLayer.h"
 
 USING_NS_CC;
 
@@ -49,6 +50,7 @@ public:
     Enemy2Layer* enemy2Layer;
     Enemy3Layer* enemy3Layer;
     UFOLayer* ufoLayer;
+  	ControlLayer* controlLayer;
 };
 
 

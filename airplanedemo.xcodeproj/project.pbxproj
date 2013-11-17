@@ -204,6 +204,7 @@
 		311B361E182E218A00B67D4B /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B361D182E218A00B67D4B /* GameScene.cpp */; };
 		311B3621182E238800B67D4B /* GameLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 311B3620182E238800B67D4B /* GameLayer.cpp */; };
 		312A3B2C1838A0BD006E73A1 /* UFOLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 312A3B2B1838A0BD006E73A1 /* UFOLayer.cpp */; };
+		312A3B2F1838BBA0006E73A1 /* ControlLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 312A3B2E1838BBA0006E73A1 /* ControlLayer.cpp */; };
 		31312F351837681E005B13FC /* Enemy2Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31312F311837681E005B13FC /* Enemy2Layer.cpp */; };
 		31312F361837681E005B13FC /* Enemy2Sprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31312F331837681E005B13FC /* Enemy2Sprite.cpp */; };
 		31312F3B18378C75005B13FC /* Enemy3Layer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31312F3718378C75005B13FC /* Enemy3Layer.cpp */; };
@@ -632,6 +633,8 @@
 		311B3620182E238800B67D4B /* GameLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameLayer.cpp; path = Classes/GameLayer.cpp; sourceTree = "<group>"; };
 		312A3B2A1838A0A1006E73A1 /* UFOLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = UFOLayer.h; path = Classes/UFOLayer.h; sourceTree = "<group>"; };
 		312A3B2B1838A0BD006E73A1 /* UFOLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = UFOLayer.cpp; path = Classes/UFOLayer.cpp; sourceTree = "<group>"; };
+		312A3B2D1838BB88006E73A1 /* ControlLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ControlLayer.h; path = Classes/ControlLayer.h; sourceTree = "<group>"; };
+		312A3B2E1838BBA0006E73A1 /* ControlLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ControlLayer.cpp; path = Classes/ControlLayer.cpp; sourceTree = "<group>"; };
 		31312F311837681E005B13FC /* Enemy2Layer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy2Layer.cpp; path = Classes/Enemy2Layer.cpp; sourceTree = "<group>"; };
 		31312F321837681E005B13FC /* Enemy2Layer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Enemy2Layer.h; path = Classes/Enemy2Layer.h; sourceTree = "<group>"; };
 		31312F331837681E005B13FC /* Enemy2Sprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = Enemy2Sprite.cpp; path = Classes/Enemy2Sprite.cpp; sourceTree = "<group>"; };
@@ -1483,6 +1486,8 @@
 				3115034B182C540A0048BDCF /* AppDelegate.h */,
 				317818571830509E00680C21 /* BulletLayer.cpp */,
 				317818531830504800680C21 /* BulletLayer.h */,
+				312A3B2E1838BBA0006E73A1 /* ControlLayer.cpp */,
+				312A3B2D1838BB88006E73A1 /* ControlLayer.h */,
 				314A09CD1835917600E69CDA /* Enemy1Layer.cpp */,
 				314A09CC1835915B00E69CDA /* Enemy1Layer.h */,
 				314A09CA18358EE000E69CDA /* Enemy1Sprite.cpp */,
@@ -1631,6 +1636,7 @@
 				31150177182C54080048BDCF /* CCLabelBMFontLoader.cpp in Sources */,
 				311502C8182C54090048BDCF /* CCSpriteBatchNode.cpp in Sources */,
 				312A3B2C1838A0BD006E73A1 /* UFOLayer.cpp in Sources */,
+				312A3B2F1838BBA0006E73A1 /* ControlLayer.cpp in Sources */,
 				31312F3B18378C75005B13FC /* Enemy3Layer.cpp in Sources */,
 				31150329182C540A0048BDCF /* CCTouchHandler.cpp in Sources */,
 				31150158182C54080048BDCF /* CCString.cpp in Sources */,
