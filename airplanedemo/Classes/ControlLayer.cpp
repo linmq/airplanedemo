@@ -11,6 +11,7 @@
 ControlLayer::ControlLayer(void)
 {
     pPauseItem=NULL;
+    scoreItem=NULL;
 }
 
 ControlLayer::~ControlLayer(void)
@@ -26,6 +27,7 @@ bool ControlLayer::init()
         
         CCSize winSize=CCDirector::sharedDirector()->getWinSize();
         
+        // add PauseMenu
         CCSprite* normalPause=CCSprite::create(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("game_pause_nor.png"));
 		CCSprite* pressedPause=CCSprite::create(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("game_pause_pressed.png"));
         pPauseItem=CCMenuItemImage::create();
@@ -34,6 +36,13 @@ bool ControlLayer::init()
         CCMenu *menuPause=CCMenu::create(pPauseItem,NULL);
 		menuPause->setPosition(CCPointZero);
 		this->addChild(menuPause,101);
+        
+        // add score
+        scoreItem=CCLabelBMFont::create("0","font.fnt");
+		scoreItem->setColor(ccc3(143,146,147));
+		scoreItem->setAnchorPoint(ccp(0,0.5));
+		scoreItem->setPosition(ccp(pPauseItem->getPositionX()+normalPause->getContentSize().width/2+5,pPauseItem->getPositionY()));
+		this->addChild(scoreItem);
         
         bRet = true;
         
@@ -58,4 +67,13 @@ void ControlLayer::menuPauseCallback(CCObject* pSender)
         CCDirector::sharedDirector()->resume();
         //this->removeChild(noTouchLayer,true);
     }
+}
+
+void ControlLayer::updateScore(int score)
+{
+	if (score>=0 && score<=MAX_SCORE)
+	{
+		CCString* strScore=CCString::createWithFormat("%d",score);
+		scoreItem->setString(strScore->m_sString.c_str());
+	}
 }

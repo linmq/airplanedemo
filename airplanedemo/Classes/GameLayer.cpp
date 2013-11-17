@@ -14,7 +14,14 @@
 
 GameLayer::GameLayer(void)
 {
+    planeLayer=NULL;
     bulletLayer = NULL;
+    enemy1Layer=NULL;
+	enemy2Layer=NULL;
+	enemy3Layer=NULL;
+	controlLayer=NULL;
+    
+    score=0;
 }
 
 GameLayer::~GameLayer(void)
@@ -65,13 +72,13 @@ bool GameLayer::init()
         this->enemy3Layer = Enemy3Layer::create();
         this->addChild(enemy3Layer);
         
-        //加入UFOLayer
-		this->ufoLayer=UFOLayer::create();
-		this->addChild(ufoLayer);
-        
         //加入controlLayer
 		this->controlLayer=ControlLayer::create();
 		this->addChild(controlLayer);
+        
+        //加入UFOLayer
+		this->ufoLayer=UFOLayer::create();
+		this->addChild(ufoLayer);
         
         // set touch enabled
         this->setTouchEnabled(true);
@@ -166,6 +173,8 @@ void GameLayer::update(float dt)
                     enemy1->life -- ;
                     bulletsToDelete->addObject(bullet);
                     enemy1sToDelete->addObject(enemy1);
+                    score+=ENEMY1_SCORE;
+					this->controlLayer->updateScore(score);
                     //CCLog("bullet:origin %d %d size %d %d", bullet->boundingBox().origin.x, bullet->boundingBox().origin.y,bullet->boundingBox().size.width, bullet->boundingBox().size.height );
                     //CCLog("enemy1:origin %d %d size %d %d", enemy1->boundingBox().origin.x, enemy1->boundingBox().origin.y,enemy1->boundingBox().size.width, enemy1->boundingBox().size.height);
                 }
@@ -207,6 +216,8 @@ void GameLayer::update(float dt)
                     enemy2->life--;
                     bulletsToDelete->addObject(bullet);
                     enemy2sToDelete->addObject(enemy2);
+                    score+=ENEMY2_SCORE;
+					this->controlLayer->updateScore(score);
                 }
                 else ;
             }

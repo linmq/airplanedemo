@@ -29,7 +29,11 @@ public:
  
     void menuPauseCallback(CCObject* pSender);
     
+    void updateScore(int score);
+    
 public:
+    
+    CCLabelBMFont* scoreItem;
     
     CCMenuItemImage* pPauseItem;
 };

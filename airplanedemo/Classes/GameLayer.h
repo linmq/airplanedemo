@@ -20,6 +20,10 @@
 
 USING_NS_CC;
 
+const int ENEMY1_SCORE=1000;
+const int ENEMY2_SCORE=6000;
+const int ENEMY3_SCORE=30000;
+
 class GameLayer : public CCLayer
 {
 public:
@@ -51,6 +55,8 @@ public:
     Enemy3Layer* enemy3Layer;
     UFOLayer* ufoLayer;
   	ControlLayer* controlLayer;
+    
+    int score;
 };
 
 

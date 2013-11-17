@@ -69,7 +69,7 @@ bool PlaneLayer::init()
 void PlaneLayer::MoveTo(CCPoint location)
 {
     // adjust the edge
-    if (isAlive && !CCDirector::sharedDirector()->isPaused())
+    if (isAlive && !CCDirector::sharedDirector()->isPaused())//或者用NoTouchLayer
     {
         CCPoint actualPoint;
         CCSize winSize = CCDirector::sharedDirector()->getWinSize();
