@@ -51,8 +51,9 @@ void BulletLayer::StopShoot()
 void BulletLayer::AddBullet(float dt)
 {
     CCSprite* bullet=CCSprite::createWithSpriteFrameName("bullet1.png");
-    bulletBatchNode->addChild(bullet);//这里子弹要添加到bulletBatchNode中，效果如下左图
-//    this->addChild(bullet);
+    //bulletBatchNode->addChild(bullet);//这里子弹要添加到bulletBatchNode中，效果如下左图
+    this->addChild(bullet);
+    this->m_pAllBullet->addObject(bullet);
     
     CCPoint planePosition = PlaneLayer::sharePlane->getChildByTag(AIRPLANE)->getPosition();
     CCPoint bulletPosition = ccp(planePosition.x, planePosition.y + PlaneLayer::sharePlane->getChildByTag(AIRPLANE)->getContentSize().height/2 );

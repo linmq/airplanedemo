@@ -67,6 +67,9 @@ bool GameLayer::init()
         // set touch enabled
         this->setTouchEnabled(true);
         
+        // collision detection
+        this->scheduleUpdate();
+        
         bRet = true;
     } while (0);
     
@@ -121,5 +124,153 @@ void GameLayer::ccTouchMoved(CCTouch *pTouch, CCEvent *pEvent)
 void GameLayer::ccTouchEnded(CCTouch *pTouch, CCEvent *pEvent)
 {
     
+}
+
+void GameLayer::update(float dt)
+{
+    CCArray* bulletsToDelete = CCArray::create();
+    bulletsToDelete->retain();
+    CCObject *bt, *et, *ut;
+    
+/*
+    if (this->bulletLayer->m_pAllBullet->count()>0)
+    {
+        CCSprite * bullet = (CCSprite*)this->bulletLayer->m_pAllBullet->objectAtIndex(0);
+        CCLog("bullet:origin %d %d size %d %d", bullet->boundingBox().origin.x, bullet->boundingBox().origin.y,bullet->boundingBox().size.width, bullet->boundingBox().size.height );
+    }
+    */
+    
+    //enemy1 && bullet CheckCollision
+    CCARRAY_FOREACH(this->bulletLayer->m_pAllBullet, bt)
+    {
+        CCSprite* bullet = (CCSprite*)bt;
+        
+        CCArray* enemy1sToDelete = CCArray::create();
+        enemy1sToDelete->retain();
+        CCARRAY_FOREACH(this->enemy1Layer->m_pAllEnemy1, et)
+        {
+            Enemy1Sprite * enemy1 = (Enemy1Sprite*)et;
+            if (CCRect::CCRectIntersectsRect(bullet->boundingBox(), enemy1->boundingBox()))
+            {
+                if (enemy1->life == 1)
+                {
+                    enemy1->life -- ;
+                    bulletsToDelete->addObject(bullet);
+                    enemy1sToDelete->addObject(enemy1);
+                    //CCLog("bullet:origin %d %d size %d %d", bullet->boundingBox().origin.x, bullet->boundingBox().origin.y,bullet->boundingBox().size.width, bullet->boundingBox().size.height );
+                    //CCLog("enemy1:origin %d %d size %d %d", enemy1->boundingBox().origin.x, enemy1->boundingBox().origin.y,enemy1->boundingBox().size.width, enemy1->boundingBox().size.height);
+                }
+                else ;
+            }
+        }
+        CCARRAY_FOREACH(enemy1sToDelete, et)
+        {
+            Enemy1Sprite * enemy1 = (Enemy1Sprite*)et;
+            this->enemy1Layer->enemy1Blowup(enemy1);
+        }
+        enemy1sToDelete->release();
+    }
+    CCARRAY_FOREACH(bulletsToDelete, bt)
+    {
+        CCSprite* bullet=(CCSprite*)bt;
+		this->bulletLayer->RemoveBullet(bullet);
+    }
+    
+    //ememy2 & bullet CheckCollision
+    CCARRAY_FOREACH(this->bulletLayer->m_pAllBullet, bt)
+    {
+        CCSprite * bullet = (CCSprite*)bt;
+        
+        CCArray * enemy2sToDelete = CCArray::create();
+        enemy2sToDelete->retain();
+        CCARRAY_FOREACH(this->enemy2Layer->m_pAllEnemy2, et)
+        {
+            Enemy2Sprite * enemy2 = (Enemy2Sprite*)et;
+            if (CCRect::CCRectIntersectsRect(bullet->boundingBox(), enemy2->boundingBox()))
+            {
+                if (enemy2->life>1)
+                {
+                    enemy2->life--;
+                    bulletsToDelete->addObject(bullet);
+                }
+                else if(enemy2->life == 1)
+                {
+                    enemy2->life--;
+                    bulletsToDelete->addObject(bullet);
+                    enemy2sToDelete->addObject(enemy2);
+                }
+                else ;
+            }
+        }
+        CCARRAY_FOREACH(enemy2sToDelete, et)
+        {
+            Enemy2Sprite * enemy2 = (Enemy2Sprite*)et;
+            this->enemy2Layer->enemy2Blowup(enemy2);
+        }
+        enemy2sToDelete->release();
+    }
+    CCARRAY_FOREACH(bulletsToDelete,bt)
+	{
+		CCSprite* bullet=(CCSprite*)bt;
+		this->bulletLayer->RemoveBullet(bullet);
+	}
+    
+    
+    CCRect airplaneRect=this->planeLayer->getChildByTag(AIRPLANE)->boundingBox();
+	airplaneRect.origin.x+=30;
+	airplaneRect.size.width-=60;
+	//enemy1 & airplane CheckCollosion
+	CCARRAY_FOREACH(this->enemy1Layer->m_pAllEnemy1,et)
+	{
+		Enemy1Sprite* enemy1=(Enemy1Sprite*)et;
+		if (enemy1->life>0)
+		{
+			if (CCRect::CCRectIntersectsRect(airplaneRect,enemy1->boundingBox()))
+			{
+				//卸载所有任务计划
+				this->unscheduleAllSelectors();
+				this->bulletLayer->StopShoot();
+				//this->mutiBulletsLayer->StopShoot();
+				//this->planeLayer->Blowup(score);
+				return;
+			}
+		}
+	}
+    
+	//enemy2 & airplane CheckCollosion
+	CCARRAY_FOREACH(this->enemy2Layer->m_pAllEnemy2,et)
+	{
+		Enemy2Sprite* enemy2=(Enemy2Sprite*)et;
+		if (enemy2->life>0)
+		{
+			if (CCRect::CCRectIntersectsRect(airplaneRect,enemy2->boundingBox()))
+			{
+				//卸载所有任务计划
+				this->unscheduleAllSelectors();
+				this->bulletLayer->StopShoot();
+				//this->mutiBulletsLayer->StopShoot();
+				//this->planeLayer->Blowup(score);
+				return;
+			}
+		}
+	}
+    
+	//enemy3 & airplane CheckCollosion
+	CCARRAY_FOREACH(this->enemy3Layer->m_pAllEnemy3,et)
+	{
+		Enemy3Sprite* enemy3=(Enemy3Sprite*)et;
+		if (enemy3->life>0)
+		{
+			if (CCRect::CCRectIntersectsRect(airplaneRect,enemy3->boundingBox()))
+			{
+				//卸载所有任务计划
+				this->unscheduleAllSelectors();
+				this->bulletLayer->StopShoot();
+				//this->mutiBulletsLayer->StopShoot();
+				//this->planeLayer->Blowup(score);
+				return;
+			}
+		}
+	}
 }
 

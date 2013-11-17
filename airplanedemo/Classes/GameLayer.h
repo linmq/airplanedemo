@@ -36,6 +36,8 @@ public:
     
     void registerWithTouchDispatcher();
     
+    void update(float dt);
+    
 public:
     CCSprite * background1;
     CCSprite * background2;
