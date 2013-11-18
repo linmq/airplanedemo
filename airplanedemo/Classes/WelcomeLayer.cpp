@@ -25,8 +25,8 @@ bool WelcomeLayer::init()
         CC_BREAK_IF(!CCLayer::init());
         
         //png加入全局cache中
-        CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ui/shoot_backgroud.plist");
-        CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("ui/shoot.plist");
+		CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("shoot_background.plist");
+        CCSpriteFrameCache::sharedSpriteFrameCache()->addSpriteFramesWithFile("shoot.plist");
         
         CCSize winSize = CCDirector::sharedDirector()->getWinSize();
         
@@ -74,4 +74,5 @@ void WelcomeLayer::loadingDone(CCNode * pNode)
 {
     CCScene * pScene = GameScene::create();
     CCTransitionMoveInB * animateScene = CCTransitionMoveInB::create(0.5f, pScene);
+    CCDirector::sharedDirector()->replaceScene(animateScene);
 }
