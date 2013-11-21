@@ -219,6 +219,8 @@
 		31A2D198183ADF8600FFB8CD /* shoot.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A2D194183ADF8600FFB8CD /* shoot.png */; };
 		31A2D199183ADF8600FFB8CD /* shoot_background.plist in Resources */ = {isa = PBXBuildFile; fileRef = 31A2D195183ADF8600FFB8CD /* shoot_background.plist */; };
 		31A2D19A183ADF8600FFB8CD /* shoot_background.png in Resources */ = {isa = PBXBuildFile; fileRef = 31A2D196183ADF8600FFB8CD /* shoot_background.png */; };
+		31AE2AE9183E4B6300817817 /* GameOverScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31AE2AE8183E4B6300817817 /* GameOverScene.cpp */; };
+		31AE2AEC183E4BBD00817817 /* GameOverLayer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 31AE2AEB183E4BBD00817817 /* GameOverLayer.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -663,6 +665,10 @@
 		31A2D194183ADF8600FFB8CD /* shoot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot.png; sourceTree = "<group>"; };
 		31A2D195183ADF8600FFB8CD /* shoot_background.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = shoot_background.plist; sourceTree = "<group>"; };
 		31A2D196183ADF8600FFB8CD /* shoot_background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shoot_background.png; sourceTree = "<group>"; };
+		31AE2AE7183E4B4B00817817 /* GameOverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverScene.h; path = Classes/GameOverScene.h; sourceTree = "<group>"; };
+		31AE2AE8183E4B6300817817 /* GameOverScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverScene.cpp; path = Classes/GameOverScene.cpp; sourceTree = "<group>"; };
+		31AE2AEA183E4B8D00817817 /* GameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GameOverLayer.h; path = Classes/GameOverLayer.h; sourceTree = "<group>"; };
+		31AE2AEB183E4BBD00817817 /* GameOverLayer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = GameOverLayer.cpp; path = Classes/GameOverLayer.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1507,6 +1513,10 @@
 				31312F3A18378C75005B13FC /* Enemy3Sprite.h */,
 				311B3620182E238800B67D4B /* GameLayer.cpp */,
 				311B361F182E237200B67D4B /* GameLayer.h */,
+				31AE2AEB183E4BBD00817817 /* GameOverLayer.cpp */,
+				31AE2AEA183E4B8D00817817 /* GameOverLayer.h */,
+				31AE2AE8183E4B6300817817 /* GameOverScene.cpp */,
+				31AE2AE7183E4B4B00817817 /* GameOverScene.h */,
 				311B361D182E218A00B67D4B /* GameScene.cpp */,
 				3115035F182C55AE0048BDCF /* GameScene.h */,
 				3115034F182C540A0048BDCF /* HelloWorldScene.cpp */,
@@ -1793,6 +1803,7 @@
 				31150161182C54080048BDCF /* CCGrabber.cpp in Sources */,
 				311502A7182C54090048BDCF /* ccGLStateCache.cpp in Sources */,
 				31150171182C54080048BDCF /* CCControlButtonLoader.cpp in Sources */,
+				31AE2AEC183E4BBD00817817 /* GameOverLayer.cpp in Sources */,
 				311502E1182C54090048BDCF /* CCVertex.cpp in Sources */,
 				3115028B182C54090048BDCF /* FontLabelStringDrawing.m in Sources */,
 				3115023F182C54090048BDCF /* CCProgressTimer.cpp in Sources */,
@@ -1803,6 +1814,7 @@
 				31150320182C540A0048BDCF /* CCTMXXMLParser.cpp in Sources */,
 				31150231182C54090048BDCF /* CCTransitionProgress.cpp in Sources */,
 				31150228182C54090048BDCF /* CCScene.cpp in Sources */,
+				31AE2AE9183E4B6300817817 /* GameOverScene.cpp in Sources */,
 				311502D5182C54090048BDCF /* CCPointExtension.cpp in Sources */,
 				3115011F182C54080048BDCF /* CCActionProgressTimer.cpp in Sources */,
 				311502FD182C54090048BDCF /* CCIMEDispatcher.cpp in Sources */,

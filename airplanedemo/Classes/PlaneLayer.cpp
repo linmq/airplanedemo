@@ -7,6 +7,7 @@
 //
 
 #include "PlaneLayer.h"
+#include "GameOverScene.h"
 
 PlaneLayer * PlaneLayer::sharePlane = NULL; // 静态变量要在cpp外初始化
 
@@ -92,4 +93,33 @@ void PlaneLayer::MoveTo(CCPoint location)
         }
         this->getChildByTag(AIRPLANE)->setPosition(location);
     }
+}
+
+void PlaneLayer::Blowup(int passScore)
+{
+    if(isAlive)
+	{
+        isAlive=false;
+		score=passScore;
+		CCAnimation* animation=CCAnimation::create();
+		animation->setDelayPerUnit(0.2f);
+		animation->addSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("hero_blowup_n1.png"));
+		animation->addSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("hero_blowup_n2.png"));
+		animation->addSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("hero_blowup_n3.png"));
+		animation->addSpriteFrame(CCSpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName("hero_blowup_n4.png"));
+        
+		CCAnimate* animate=CCAnimate::create(animation);
+		CCCallFunc* removePlane=CCCallFunc::create(this,callfunc_selector(PlaneLayer::RemovePlane));
+		CCSequence* sequence=CCSequence::create(animate,removePlane);
+		this->getChildByTag(AIRPLANE)->stopAllActions();
+		this->getChildByTag(AIRPLANE)->runAction(sequence);
+    }
+}
+
+void PlaneLayer::RemovePlane()
+{
+    this->removeChildByTag(AIRPLANE,true);
+	GameOverScene* pScene=GameOverScene::create(score);
+	CCTransitionMoveInT* animateScene=CCTransitionMoveInT::create(0.8f,pScene);
+	CCDirector::sharedDirector()->replaceScene(animateScene);
 }

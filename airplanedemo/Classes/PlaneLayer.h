@@ -27,10 +27,17 @@ public:
     
     virtual bool init();
     
+    void Blowup(int passScore);
+    
+    void RemovePlane();
     
 public:
+    
     static PlaneLayer * sharePlane;
+    
     bool isAlive;
+    
+    int score;
 };
 
 #endif
