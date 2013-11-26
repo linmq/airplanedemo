@@ -11,6 +11,7 @@
 #include "Enemy2Sprite.h"
 #include "Enemy3Sprite.h"
 #include "UFOLayer.h"
+#include "SimpleAudioEngine.h"
 
 GameLayer::GameLayer(void)
 {
@@ -85,6 +86,11 @@ bool GameLayer::init()
         
         // collision detection
         this->scheduleUpdate();
+        
+        if (!CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying())
+        {
+            CocosDenshion::SimpleAudioEngine::sharedEngine()->playBackgroundMusic("game_music.mp3", true);
+        }
         
         bRet = true;
     } while (0);
