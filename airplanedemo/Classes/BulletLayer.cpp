@@ -64,7 +64,7 @@ void BulletLayer::AddBullet(float dt)
     float realMoveDuration = length/velocity;
     
     CCFiniteTimeAction * actionMove = CCMoveTo::create(realMoveDuration, ccp(bulletPosition.x, CCDirector::sharedDirector()->getWinSize().height + bullet->getContentSize().height/2 ));
-    CCFiniteTimeAction * actionDone = CCCallFunc::create(this, callfunc_selector(BulletLayer::bulletMoveFinished));
+    CCFiniteTimeAction * actionDone = CCCallFuncN::create(this, callfuncN_selector(BulletLayer::bulletMoveFinished));
     CCSequence * sequence = CCSequence::create(actionMove, actionDone);
     bullet->runAction(sequence);
 }
