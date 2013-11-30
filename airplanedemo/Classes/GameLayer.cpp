@@ -154,14 +154,6 @@ void GameLayer::update(float dt)
     bulletsToDelete->retain();
     CCObject *bt, *et, *ut;
     
-/*
-    if (this->bulletLayer->m_pAllBullet->count()>0)
-    {
-        CCSprite * bullet = (CCSprite*)this->bulletLayer->m_pAllBullet->objectAtIndex(0);
-        CCLog("bullet:origin %d %d size %d %d", bullet->boundingBox().origin.x, bullet->boundingBox().origin.y,bullet->boundingBox().size.width, bullet->boundingBox().size.height );
-    }
-    */
-    
     //enemy1 && bullet CheckCollision
     CCARRAY_FOREACH(this->bulletLayer->m_pAllBullet, bt)
     {
@@ -181,9 +173,7 @@ void GameLayer::update(float dt)
                     enemy1sToDelete->addObject(enemy1);
                     score+=ENEMY1_SCORE;
 					this->controlLayer->updateScore(score);
-                    //CCLog("bullet:origin %d %d size %d %d", bullet->boundingBox().origin.x, bullet->boundingBox().origin.y,bullet->boundingBox().size.width, bullet->boundingBox().size.height );
-                    //CCLog("enemy1:origin %d %d size %d %d", enemy1->boundingBox().origin.x, enemy1->boundingBox().origin.y,enemy1->boundingBox().size.width, enemy1->boundingBox().size.height);
-                }
+               }
                 else ;
             }
         }
@@ -240,6 +230,52 @@ void GameLayer::update(float dt)
 		CCSprite* bullet=(CCSprite*)bt;
 		this->bulletLayer->RemoveBullet(bullet);
 	}
+    
+    //enemy3 & bullet CheckCollosion
+	CCARRAY_FOREACH(this->bulletLayer->m_pAllBullet,bt)
+	{
+		CCSprite* bullet=(CCSprite*)bt;
+        
+		CCArray* enemy3sToDelete=CCArray::create();
+		enemy3sToDelete->retain();
+		CCARRAY_FOREACH(this->enemy3Layer->m_pAllEnemy3,et)
+		{
+			Enemy3Sprite* enemy3=(Enemy3Sprite*)et;
+			if (CCRect::CCRectIntersectsRect(bullet->boundingBox(),enemy3->boundingBox()))
+			{
+				//如果life>1,移除bullet
+				if (enemy3->life>1)
+				{
+					enemy3->life--;
+					bulletsToDelete->addObject(bullet);
+				}
+				//如果life==1,移除enemy3
+				else if(enemy3->life==1)
+				{
+					enemy3->life--;
+					bulletsToDelete->addObject(bullet);
+					enemy3sToDelete->addObject(enemy3);
+					score+=ENEMY3_SCORE;
+					this->controlLayer->updateScore(score);
+				}
+				//此时处在animate阶段,不做处理
+				else ;
+			}
+		}
+		CCARRAY_FOREACH(enemy3sToDelete,et)
+		{
+			Enemy3Sprite* enemy3=(Enemy3Sprite*)et;
+			this->enemy3Layer->enemy3Blowup(enemy3);
+			//CCLog("%d",enemy3->life);
+		}
+		enemy3sToDelete->release();
+	}
+	CCARRAY_FOREACH(bulletsToDelete,bt)
+	{
+		CCSprite* bullet=(CCSprite*)bt;
+		this->bulletLayer->RemoveBullet(bullet);
+	}
+	bulletsToDelete->release();
     
     
     CCRect airplaneRect=this->planeLayer->getChildByTag(AIRPLANE)->boundingBox();
