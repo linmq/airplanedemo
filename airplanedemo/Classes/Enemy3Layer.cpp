@@ -96,6 +96,8 @@ void Enemy3Layer::enemy3Blowup(Enemy3Sprite* enemy3)
     CCCallFuncND * removeEnemy3 = CCCallFuncND::create(this, callfuncND_selector(Enemy3Layer::RemoveEnemy3), (void*)enemy3);
     CCSequence * sequence = CCSequence::create(animate, removeEnemy3);
     enemy3->runAction(sequence);
+    
+    CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("enemy3_down.mp3");
 }
 
 void Enemy3Layer::RemoveEnemy3(CCNode* pTarget, void *data)
