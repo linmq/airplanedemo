@@ -11,6 +11,7 @@
 
 #include "cocos2d.h"
 #include "Enemy2Sprite.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
