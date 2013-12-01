@@ -62,6 +62,12 @@ bool GameOverLayer::init()
 		menuBack->setPosition(CCPointZero);
 		this->addChild(menuBack);
         
+        if (CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying())
+		{
+			CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
+		}
+		CocosDenshion::SimpleAudioEngine::sharedEngine()->playEffect("game_over.mp3");
+        
         bRet = true;
     } while (0);
     

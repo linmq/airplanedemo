@@ -10,6 +10,7 @@
 #define airplanedemo_GameOverLayer_h
 
 #include "cocos2d.h"
+#include "SimpleAudioEngine.h"
 
 USING_NS_CC;
 
