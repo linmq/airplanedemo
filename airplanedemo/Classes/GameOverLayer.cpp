@@ -62,6 +62,13 @@ bool GameOverLayer::init()
 		menuBack->setPosition(CCPointZero);
 		this->addChild(menuBack);
         
+        // show score
+        CCString *strScore = CCString::createWithFormat("%d", score);
+        CCLabelBMFont * finalScore = CCLabelBMFont::create(strScore->m_sString.c_str(), "font.fnt");
+        finalScore->setColor(ccc3(143, 146, 147));
+        finalScore->setPosition(ccp(winSize.width/2, winSize.height/2));
+        this->addChild(finalScore);
+        
         if (CocosDenshion::SimpleAudioEngine::sharedEngine()->isBackgroundMusicPlaying())
 		{
 			CocosDenshion::SimpleAudioEngine::sharedEngine()->stopBackgroundMusic();
